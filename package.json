@@ -1,0 +1,27 @@
+{
+    "name": "jcdashboard",
+    "version": "1.0.0",
+    "engines": {
+        "node": ">=16.0.0"
+    },
+    "description": "",
+    "main": "server/server.js",
+    "scripts": {
+      "start": "node server --ignore client",
+      "develop": "concurrently \"cd server && npm run start\" \"cd client && npm start\"",
+      "install": "cd server && npm i && cd ../client && npm i",
+      "seed": "cd server && node ./seeds/seeds.js",
+      "build": "cd client && npm run build"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "concurrently": "^5.1.0"
+    },
+    "dependencies": {
+      "bcrypt": "^5.1.0",
+      "bcryptjs": "^2.4.3",
+      "idb-promise": "^0.0.3"
+    }
+  }
