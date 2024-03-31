@@ -4,18 +4,11 @@ const { Schema } = mongoose;
 
 
 const dataPoint = new Schema({
-    topic: {
+    concept: {
         type: String,
         required: true
     },
-    reference: {
-        type: String,
-        required: true
-    },
-    scriptureText: {
-        type: String,
-        required: true
-    }
+    references: [{type: Schema.Types.ObjectId, ref: 'references'}]
 
 });
 
